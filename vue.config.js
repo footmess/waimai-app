@@ -1,40 +1,42 @@
+const isPro = process.env.NODE_ENV === 'production';
+
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? '/images/' : '/',
-	outputDir: process.env.outputDir,
-	css: {
-		//针对css相关的loader传递选项
-		loaderOptions: {
-			css: {
-				//这里针对css-loader 具体参见webpack->css-loader选项
-			// 	localIdentName: '[name]-[hash]',
-			},
-			postcss: {
-				//针对postcss-loader
-			}
-		}
-	},
-	configureWebpack: (config) => {
-		if (process.env.NODE_ENV === 'production') {
-			//生产环境
-		} else {
-			//dev环境
-		}
-	},
+	// 基本路径
+	publicPath: './',
+	productionSourceMap: !isPro,
+	// lintOnSave: false,
+	filenameHashing: false, // 取消文件hash
 	chainWebpack: (config) => {
-		config.module
-			//修改loader
-			.rule('vue')
-			.use('vue-loader')
-			.loader('vue-loader')
-			.tap((options) => {
-				//修改选项
-				return options;
-			});
-		//添加loader
-		config.module.rule('graphql').test(/\.graphql$/).use('graphql-tag/loader').end();
-		//替换一个规则里的loader
+		// 添加svg-sprite-loader
 		const svgRule = config.module.rule('svg');
 		svgRule.uses.clear();
-		svgRule.use('vue-svg-loader').loader('vue-svg-loader');
+		svgRule.use('raw-loader').loader('raw-loader');
+	},
+	configureWebpack: (config) => {
+		// 开启分离js
+		// https://webpack.docschina.org/configuration/optimization/
+		config.optimization = {
+			runtimeChunk: 'single',
+			splitChunks: {
+				chunks: 'all',
+				maxInitialRequests: Infinity,
+				minSize: 20000,
+				cacheGroups: {
+					vendor: {
+						test: /[\\/]node_modules[\\/]/,
+						name(module) {
+							// get the name. E.g. node_modules/packageName/not/this/part.js
+							// or node_modules/packageName
+							const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+							// npm package names are URL-safe, but some servers don't like @ symbols
+							return `npm.${packageName.replace('@', '')}`;
+						}
+					}
+				}
+			}
+		};
+	},
+	devServer: {
+		disableHostCheck: true
 	}
 };

@@ -705,6 +705,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bugsnag/safe-json-stringify@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/@bugsnag/safe-json-stringify/download/@bugsnag/safe-json-stringify-5.0.0.tgz#1c39847968b52f5c08b7c76754406f9d4446b292"
+  integrity sha1-HDmEeWi1L1wIt8dnVEBvnURGspI=
+
 "@hapi/address@2.x.x":
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.2.tgz#1c794cd6dbf2354d1eb1ef10e0303f573e1c7222"
@@ -758,6 +763,79 @@
   version "1.1.3"
   resolved "https://registry.npm.taobao.org/@nodelib/fs.stat/download/@nodelib/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha1-K1o6s/kYzKSKjHVMCBaOPwPrphs=
+
+"@sentry/browser@^5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/browser/download/@sentry/browser-5.22.3.tgz?cache=0&sync_timestamp=1598632687795&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Fbrowser%2Fdownload%2F%40sentry%2Fbrowser-5.22.3.tgz#7a64bd1cf01bf393741a3e4bf35f82aa927f5b4e"
+  integrity sha1-emS9HPAb85N0Gj5L81+CqpJ/W04=
+  dependencies:
+    "@sentry/core" "5.22.3"
+    "@sentry/types" "5.22.3"
+    "@sentry/utils" "5.22.3"
+    tslib "^1.9.3"
+
+"@sentry/core@5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/core/download/@sentry/core-5.22.3.tgz?cache=0&sync_timestamp=1598632686652&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Fcore%2Fdownload%2F%40sentry%2Fcore-5.22.3.tgz#030f435f2b518f282ba8bd954dac90cd70888bd7"
+  integrity sha1-Aw9DXytRjygrqL2VTayQzXCIi9c=
+  dependencies:
+    "@sentry/hub" "5.22.3"
+    "@sentry/minimal" "5.22.3"
+    "@sentry/types" "5.22.3"
+    "@sentry/utils" "5.22.3"
+    tslib "^1.9.3"
+
+"@sentry/hub@5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/hub/download/@sentry/hub-5.22.3.tgz?cache=0&sync_timestamp=1598632686371&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Fhub%2Fdownload%2F%40sentry%2Fhub-5.22.3.tgz#08309a70d2ea8d5e313d05840c1711f34f2fffe5"
+  integrity sha1-CDCacNLqjV4xPQWEDBcR808v/+U=
+  dependencies:
+    "@sentry/types" "5.22.3"
+    "@sentry/utils" "5.22.3"
+    tslib "^1.9.3"
+
+"@sentry/integrations@^5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/integrations/download/@sentry/integrations-5.22.3.tgz?cache=0&sync_timestamp=1598632683971&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Fintegrations%2Fdownload%2F%40sentry%2Fintegrations-5.22.3.tgz#ecec954d1d8802930baf824cac4cd2a51c8691cb"
+  integrity sha1-7OyVTR2IApMLr4JMrEzSpRyGkcs=
+  dependencies:
+    "@sentry/types" "5.22.3"
+    "@sentry/utils" "5.22.3"
+    localforage "1.8.1"
+    tslib "^1.9.3"
+
+"@sentry/minimal@5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/minimal/download/@sentry/minimal-5.22.3.tgz?cache=0&sync_timestamp=1598632687453&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Fminimal%2Fdownload%2F%40sentry%2Fminimal-5.22.3.tgz#706e4029ae5494123d3875c658ba8911aa5cc440"
+  integrity sha1-cG5AKa5UlBI9OHXGWLqJEapcxEA=
+  dependencies:
+    "@sentry/hub" "5.22.3"
+    "@sentry/types" "5.22.3"
+    tslib "^1.9.3"
+
+"@sentry/tracing@^5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/tracing/download/@sentry/tracing-5.22.3.tgz?cache=0&sync_timestamp=1598632678859&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Ftracing%2Fdownload%2F%40sentry%2Ftracing-5.22.3.tgz#9b5a376e3164c007a22e8642ec094104468cac0c"
+  integrity sha1-m1o3bjFkwAeiLoZC7AlBBEaMrAw=
+  dependencies:
+    "@sentry/hub" "5.22.3"
+    "@sentry/minimal" "5.22.3"
+    "@sentry/types" "5.22.3"
+    "@sentry/utils" "5.22.3"
+    tslib "^1.9.3"
+
+"@sentry/types@5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/types/download/@sentry/types-5.22.3.tgz?cache=0&sync_timestamp=1598632686916&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Ftypes%2Fdownload%2F%40sentry%2Ftypes-5.22.3.tgz#d1d547b30ee8bd7771fa893af74c4f3d71f0fd18"
+  integrity sha1-0dVHsw7ovXdx+ok690xPPXHw/Rg=
+
+"@sentry/utils@5.22.3":
+  version "5.22.3"
+  resolved "https://registry.npm.taobao.org/@sentry/utils/download/@sentry/utils-5.22.3.tgz?cache=0&sync_timestamp=1598632687188&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40sentry%2Futils%2Fdownload%2F%40sentry%2Futils-5.22.3.tgz#e3bda3e789239eb16d436f768daa12829f33d18f"
+  integrity sha1-472j54kjnrFtQ292jaoSgp8z0Y8=
+  dependencies:
+    "@sentry/types" "5.22.3"
+    tslib "^1.9.3"
 
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.7.1"
@@ -3588,6 +3666,18 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.npm.taobao.org/functional-red-black-tree/download/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
+fundebug-javascript@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.npm.taobao.org/fundebug-javascript/download/fundebug-javascript-2.4.2.tgz?cache=0&sync_timestamp=1594867908353&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffundebug-javascript%2Fdownload%2Ffundebug-javascript-2.4.2.tgz#5999866205a488cdfac71cc7fa10c944c9d1be54"
+  integrity sha1-WZmGYgWkiM36xxzH+hDJRMnRvlQ=
+  dependencies:
+    "@bugsnag/safe-json-stringify" "^5.0.0"
+
+fundebug-vue@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npm.taobao.org/fundebug-vue/download/fundebug-vue-0.0.1.tgz#aae1a6a0bb580c2da5835f1702fae583e2fe7609"
+  integrity sha1-quGmoLtYDC2lg18XAvrlg+L+dgk=
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.npm.taobao.org/gauge/download/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -4044,6 +4134,11 @@ ignore@^4.0.3, ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.npm.taobao.org/ignore/download/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha1-dQ49tYYgh7RzfrrIIH/9HvJ7Jfw=
+
+immediate@~3.0.5:
+  version "3.0.6"
+  resolved "https://registry.npm.taobao.org/immediate/download/immediate-3.0.6.tgz?cache=0&sync_timestamp=1591712549735&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimmediate%2Fdownload%2Fimmediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
+  integrity sha1-nbHb0Pr43m++D13V5Wu2BigN5ps=
 
 import-cwd@^2.0.0:
   version "2.1.0"
@@ -4659,6 +4754,13 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lie@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npm.taobao.org/lie/download/lie-3.1.1.tgz#9a436b2cc7746ca59de7a41fa469b3efb76bd87e"
+  integrity sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=
+  dependencies:
+    immediate "~3.0.5"
+
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
@@ -4695,6 +4797,13 @@ loader-utils@^1.0.2, loader-utils@^1.1.0, loader-utils@^1.2.3:
     big.js "^5.2.2"
     emojis-list "^2.0.0"
     json5 "^1.0.1"
+
+localforage@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.npm.taobao.org/localforage/download/localforage-1.8.1.tgz#f6c0a24b41ab33b10e4dc84342dd696f6f3e3433"
+  integrity sha1-9sCiS0GrM7EOTchDQt1pb28+NDM=
+  dependencies:
+    lie "3.1.1"
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -7571,6 +7680,11 @@ tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha1-w8GflZc/sKYpc/sJ2Q2WHuQ+XIo=
+
+tslib@^1.9.3:
+  version "1.13.0"
+  resolved "https://registry.npm.taobao.org/tslib/download/tslib-1.13.0.tgz?cache=0&sync_timestamp=1596752024863&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.13.0.tgz#c881e13cc7015894ed914862d276436fa9a47043"
+  integrity sha1-yIHhPMcBWJTtkUhi0nZDb6mkcEM=
 
 tty-browserify@0.0.0:
   version "0.0.0"

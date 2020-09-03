@@ -1,0 +1,26 @@
+module.exports = {
+	root: true,
+	env: {
+		node: true
+	},
+	extends: [ 'plugin:vue/essential', 'eslint:recommended' ],
+	rules: {
+		'no-console':
+
+				process.env.NODE_ENV === 'production' ? 'error' :
+				'off',
+		'no-debugger':
+
+				process.env.NODE_ENV === 'production' ? 'error' :
+				'off',
+		// ! 将移除修复
+		'no-unused-vars': 0,
+		'vue/no-parsing-error': 0,
+		'no-empty': 0,
+		'no-undef': 0,
+		'vue/valid-v-bind': 0
+	},
+	parserOptions: {
+		parser: 'babel-eslint'
+	}
+};

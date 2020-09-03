@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <!-- <div>{{process.env.VUE_APP_target}}</div> -->
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img src="./xxxxx.png"> -->
   </div>
 </template>
 
@@ -15,8 +16,16 @@ export default {
     HelloWorld
   },
   mounted() {
+    uuu
     // console.log(process.env.VUE_APP_target)
-  }
+    // window.onerror = (...args) => {
+    //   console.log('trigger');
+    //   console.log('onerror:',args)
+    // }
+  },
+  created() {
+    ijaoi
+  } 
 }
 </script>
 
